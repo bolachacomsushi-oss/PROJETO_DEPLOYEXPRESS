@@ -1,0 +1,132 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5EBD7;
+    font-family: Arial, sans-serif;
+    color: #211331;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #211331;
+    color: #F5EBD7;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FFD65A;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.goback {
+    color: #F5EBD7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.goback:hover {
+    color: #35D6E8;
+}
+
+/* DETALHES DO PRODUTO */
+
+.detalhes {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #F0DDF7;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(33, 19, 49, 0.12);
+}
+
+.detalhes img {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacoes h2 {
+    font-size: 30px;
+    color: #211331;
+}
+
+.informacoes h3 {
+    color: #F04491;
+    font-size: 24px;
+}
+
+/* CAMPOS */
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #C7A9D4;
+    border-radius: 6px;
+    background: #FFF8ED;
+    color: #211331;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #F04491;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* BOTÃO */
+
+button {
+    background: #F04491;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #35D6E8;
+    color: #211331;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .detalhes {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .detalhes img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,142 @@
+
+/* Configuração geral */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5EBD7;
+    color: #211331;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #211331;
+    color: #FFD65A;
+}
+
+.logo {
+    color: #F04491;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.botao-mais {
+    background-color: #F04491;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 5px 13px;
+    transition: 0.2s;
+}
+
+.botao-mais:hover {
+    background-color: #35D6E8;
+    color: #211331;
+    transform: scale(1.1);
+}
+
+.botao-mais:active {
+    transform: scale(0.9);
+}
+
+/* Navegação */
+
+.navegacao {
+    background-color: #392344;
+    padding: 12px;
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacao a {
+    color: #F5EBD7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    color: #35D6E8;
+}
+
+/* Categorias */
+
+.cardapio {
+    padding: 20px;
+}
+
+.categoria {
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+}
+
+.categoria h2 {
+    border-bottom: 3px solid #F04491;
+    padding-bottom: 10px;
+    color: #211331;
+}
+
+/* Grade de produtos */
+
+.lista-produtos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(200px, 1fr)
+    );
+    gap: 20px;
+    padding: 0;
+}
+
+/* Cartões */
+
+.food {
+    background-color: #F0DDF7;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(33, 19, 49, 0.12);
+    transition: 0.3s;
+}
+
+.food img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.food h3 {
+    color: #392344;
+}
+
+.preco {
+    font-weight: bold;
+    color: #E52C80;
+}
+
+/* Rodapé */
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #211331;
+    color: #FFD65A;
+}

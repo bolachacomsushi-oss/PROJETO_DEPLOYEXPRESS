@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Patty - Pedidos</title>
+    <link rel="stylesheet" href="stylepedido2.css">
+</head>
+<body>
+
+    <header>
+        <a href="HOME.HTML" class="logo">VINTAGE PATTY</a>
+        <nav>
+            <a href="HOME.HTML">Início</a>
+            <a href="CARDAPIO.HTML">Cardápio</a>
+            <a href="HOME.HTML#promocoes">Promoções</a>
+            <a href="PEDIDO.HTML">Pedidos</a>
+            <a href="SOBRE.HTML">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="titulo">
+            <h2>FAÇA SEU PEDIDO!</h2>
+            <p>Escolha seus favoritos e aproveite essa viagem de sabor.</p>
+        </section>
+
+        <section class="produtos">
+            <h2>Nosso Cardápio</h2>
+
+            <div class="lista">
+
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0H-hvkwnwf6g4Rl2mr-0FU1i5pAzkFLcHQkj86EWyeQ&s=10" alt="Back to 80's">
+                    <h3>Back to 80's</h3>
+                    <p>Hambúrguer artesanal, queijo e molho especial.</p>
+                    <span>R$ 27,90</span>
+                    <button onclick="adicionar('Back to 80s', 27.90)">
+                        + Adicionar
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDY-lUrYe78iy7Raeh-VxbFE9fQorh7EkfJDzfPH7cvJos9Fnif7hA1Uc&s=10" alt="Grease Burger">
+                    <h3>Grease Burger</h3>
+                    <p>Carne artesanal, queijo cheddar e salada.</p>
+                    <span>R$ 25,00</span>
+                    <button onclick="adicionar('Grease Burger', 25.00)">
+                        + Adicionar
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/porcao_disco.png" alt="DANCE">
+                    <h3>Disco!</h3>
+                    <p>Hambúrguer, bacon crocante e queijo.</p>
+                    <span>R$ 25,00</span>
+                    <button onclick="adicionar('Disco!', 25.00)">
+                        + Adicionar
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/cadillac.png" alt="Batatas Cadillac">
+                    <h3>Batatas Cadillac</h3>
+                    <p>Batatas crocantes com tempero especial.</p>
+                    <span>R$ 19,90</span>
+                    <button onclick="adicionar('Batatas Cadillac', 19.90)">
+                        + Adicionar
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="finalizar">
+            <div class="carrinho">
+                <h2>Seu Pedido</h2>
+
+                <ul id="itens">
+                    <li>Nenhum produto adicionado.</li>
+                </ul>
+
+                <h3>Total: R$ <span id="total">0.00</span></h3>
+
+                <a href="CARDAPIO.HTML" class="voltar-cardapio">← Continuar comprando</a>
+            </div>
+
+            <div class="dados">
+                <h2>Seus Dados</h2>
+
+                <form onsubmit="finalizarPedido(event)">
+                    <input type="text" id="nome"
+                        placeholder="Seu nome" required>
+
+                    <input type="text" id="endereco"
+                        placeholder="Endereço de entrega" required>
+
+                    <input type="tel" id="telefone"
+                        placeholder="Telefone" required>
+
+                    <select id="pagamento" required>
+                        <option value="">Forma de pagamento</option>
+                        <option>Pix</option>
+                        <option>Dinheiro</option>
+                        <option>Cartão de crédito</option>
+                        <option>Cartão de débito</option>
+                    </select>
+
+                    <button type="submit">Finalizar Pedido</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="sobre">
+        <a href="HOME.HTML" class="logo2">VINTAGE PATTY</a>
+        <p>Desde 2018 matando sua fome!</p>
+    </footer>
+
+    <script src="pedido.js"></script>
+    <form onsubmit="finalizarPedido(event)"></form>
+
+</body>
+</html>

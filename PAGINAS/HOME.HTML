@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylehome2.css">
+    <title>Vintage Patty - O hamburguer que te faz voltar no tempo</title>
+</head>
+<body>
+
+    <div class="site">
+
+        <header>
+            <a href="HOME.HTML" class="logo">VINTAGE PATTY</a>
+
+            <nav>
+                <a href="#inicio">início</a>
+                <a href="CARDAPIO.HTML">Cardápio</a>
+                <a href="#promocoes1">Promoções</a>
+                <a href="SOBRE.HTML">Sobre</a>
+            </nav>
+        </header>
+
+        <hr class="linha">
+
+        <section class="banner" id="inicio">
+            <div class="imagem-banner">
+                <figure>
+                    <img src="https://fisk-cms-prod.s3.sa-east-1.amazonaws.com/banner-6-curiosidades-sobre-o-hamburguer-1784131416681-743099265.jpg" alt="">
+                </figure>
+        </section>
+
+        <section class="cardapio" id="cardapio">
+
+            <article class="produto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0H-hvkwnwf6g4Rl2mr-0FU1i5pAzkFLcHQkj86EWyeQ&s=10" alt="Hambúrguer artesanal">
+                <p>Back to 80's</p>
+                <button>compre aqui</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ47af_ngPnbUVh8iuEj2IQxrQ36--JeIkxMqDiI6dpNQ&s=10" alt="Hambúrguer com queijo">
+                <p>The Classic</p>
+                <button>compre aqui</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSJQlkGKRsQMxKwc3xP0Bw-NQ5TY-tLpwj9BtUAgC5jg&s=10" alt="Hambúrguer com bacon">
+                <p>Jukebox Burger</p>
+                <button>compre aqui</button>
+            </article>
+
+        </section>
+
+        <section class="promocoes2" id="promocoes1">
+            <h2>Promoções do Dia</h2>
+
+            <div class="lista-promocoes">
+
+                <article class="promocao">
+                    <div class="imagem-promocao">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDY-lUrYe78iy7Raeh-VxbFE9fQorh7EkfJDzfPH7cvJos9Fnif7hA1Uc&s=10" alt="Grease Burguer">
+                        <button>+</button>
+                    </div>
+                    <p>Grease Burger</p>
+                    <p>R$ 25,00</p>
+                </article>
+
+                <article class="promocao">
+                    <div class="imagem-promocao">
+                        <img src="IMG/shakeitback.png" alt="Shake It Back">
+                        <button id="shakeit">+</button>
+                    </div>
+                    <p>Shake It Back</p>
+                    <p>R$ 19,00</p>
+                </article>
+
+                <article class="promocao">
+                    <div class="imagem-promocao">
+                        <img src="IMG/cadillac.png" alt="Batatas Cadillac">
+                        <button>+</button>
+                    </div>
+                    <p>Batatas Cadillac</p>
+                    <p>R$ 19,90</p>
+                </article>
+
+            </div>
+        </section>
+        <br>
+
+        <hr id="linha">
+
+        <footer>
+
+            <div class="frase">
+                <span></span>
+                <p>Desde 2018
+                matando
+                sua fome</p>
+            </div>
+
+            <div class="atendimento">
+                <div class="titulo-atendimento">
+                    <p>Suporte e Atendimento</p>
+                    <a href="SOBRE.HTML">fale com a gente</a>
+                </div>
+
+                <figure class="imagem-atendimento">
+                    <img src="IMG/logovintagepatty.png" alt="">
+                </figure>
+
+                <div class="selos">
+                    <span>Instagram</span>
+                    <span>whatsApp</span>
+                    <span>Ifood</span>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+        // Seleciona os botões dos produtos da Home
+        let botoes = document.querySelectorAll(".produto button, .promocao button");
+
+        botoes.forEach(function(botao) {
+
+            botao.addEventListener("click", function() {
+
+                let produto = botao.closest(".produto, .promocao");
+                let nome = produto.querySelector("p").innerText;
+
+                let produtos = {
+                    "Back to 80's": {
+                        descricao: "Um clássico para viajar no tempo.",
+                        preco: 25.90
+                    },
+
+                    "The Classic": {
+                        descricao: "O sabor tradicional que nunca sai de moda.",
+                        preco: 22.90
+                    },
+
+                    "Jukebox Burger": {
+                        descricao: "Um sucesso para matar a fome.",
+                        preco: 27.90
+                    },
+
+                    "Grease Burger": {
+                        descricao: "Um sucesso para matar a fome.",
+                        preco: 27.90
+                    },
+
+                    "Shake It Back": {
+                        descricao: "Uma bebida cremosa com clima retrô.",
+                        preco: 15.90
+                    },
+
+                    "Batatas Cadillac": {
+                        descricao: "Batatas crocantes para acompanhar seu lanche.",
+                        preco: 12.90
+                    }
+                };
+
+                let dadosProduto = produtos[nome];
+
+                if (!dadosProduto) {
+                    alert("Produto não encontrado!");
+                    return;
+                }
+
+                let imagem = produto.querySelector("img").getAttribute("src");
+
+                let dados = {
+                    nome: nome,
+                    descricao: dadosProduto.descricao,
+                    preco: "R$ " + dadosProduto.preco.toFixed(2).replace(".", ","),
+                    valor: dadosProduto.preco,
+                    imagem: imagem
+                };
+
+                localStorage.setItem("produtoSelecionado", JSON.stringify(dados));
+
+                window.location.href = "produtos.html";
+            });
+
+        });
+    </script>
+
+</body>
+</html>
